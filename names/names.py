@@ -13,13 +13,9 @@ f.close()
 
 duplicates = []  # Return the list of duplicates in this data structure
 
-
+# original runtime was O(n^2)
 
 # Replace the nested for loops below with your improvements
-# for name_1 in names_1:
-#     if name_1 in names_2:
-#         duplicates.append(name_1)
-
 bst1 = BinarySearchTree(names_1[0])
 
 for i in names_1:
