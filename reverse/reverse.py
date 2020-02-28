@@ -44,11 +44,13 @@ class LinkedList:
 
   def reverse_list(self):
     # TO BE COMPLETED
-    prev = None
-    current = self.head 
-    while(current is not None): 
-        next_node = current.next_node
-        current.next_node = prev 
+    prev = None # starting point
+    current = self.head # first thing in the list
+    following = self.head
+    while(current is not None): # while we can't go any further right
+        following = following.next_node # what comes next is to the right of wherever we arer
+        current.next_node = prev  # where we currently are's new next is gonna be what's currently before it
+        # move prev and current forward
         prev = current 
-        current = next_node
-    self.head = prev 
+        current = following
+    self.head = prev
